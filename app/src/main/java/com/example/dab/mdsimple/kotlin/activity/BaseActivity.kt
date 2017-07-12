@@ -41,10 +41,11 @@ abstract class BaseActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         FAB = findViewById(R.id.fab) as FloatingActionButton
+        initData()
         initView(inflateView)
         initToolbarEvent(toolbarView, toolbar)
         initEvent()
-        initData()
+
     }
 
     fun inflateView(viewStub: ViewStub, @LayoutRes layoutResource: Int): View? {

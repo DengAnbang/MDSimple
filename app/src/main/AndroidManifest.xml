@@ -15,9 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".kotlin.activity.FloatingActionButtonActivity">
+        <activity android:name=".kotlin.activity.fab.FloatingActionButtonActivity">
         </activity>
-        <activity android:name=".kotlin.activity.TabLayoutActivity">
+        <activity android:name=".kotlin.activity.tab.TabLayoutActivity">
         </activity>
     </application>
 

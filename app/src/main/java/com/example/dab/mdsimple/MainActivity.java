@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.example.dab.mdsimple.kotlin.activity.FloatingActionButtonActivity;
 import com.example.dab.mdsimple.kotlin.activity.BaseActivity;
-import com.example.dab.mdsimple.kotlin.activity.TabLayoutActivity;
+import com.example.dab.mdsimple.kotlin.activity.fab.FloatingActionButtonActivity;
+import com.example.dab.mdsimple.kotlin.activity.tab.TabLayoutActivity;
 
 import org.jetbrains.annotations.Nullable;
 
