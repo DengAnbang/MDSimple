@@ -38,6 +38,7 @@
         android:layout_marginTop="?attr/actionBarSize"/>
 
     <android.support.design.widget.FloatingActionButton
+        app:layout_behavior="com.example.dab.mdsimple.kotlin.behavior.FABBehavior"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
