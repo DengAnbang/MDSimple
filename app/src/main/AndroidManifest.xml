@@ -19,6 +19,8 @@
         </activity>
         <activity android:name=".kotlin.activity.tab.TabLayoutActivity">
         </activity>
+        <activity android:name=".kotlin.activity.coordinator.CoordinatorActivity">
+        </activity>
     </application>
 
 </manifest>

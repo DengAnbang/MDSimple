@@ -20,4 +20,10 @@
         android:layout_height="wrap_content"
         android:onClick="tabLayout"
         android:text="TabLayout"/>
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="coordinator"
+        android:text="coordinator"/>
 </LinearLayout>

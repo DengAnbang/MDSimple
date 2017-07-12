@@ -14,7 +14,7 @@ import com.example.dab.mdsimple.R
  * Created by dab on 2017/7/10.
  */
 abstract class BaseActivity : AppCompatActivity() {
-    var FAB:FloatingActionButton?=null
+    var FAB: FloatingActionButton? = null
     @LayoutRes
     protected abstract fun getContentView(): Int
 
@@ -34,13 +34,17 @@ abstract class BaseActivity : AppCompatActivity() {
         val inflate = LayoutInflater.from(this).inflate(R.layout.activity_base, null)
         val viewStub = inflate.findViewById(R.id.vs_content) as ViewStub?
         val inflateView = inflateView(viewStub!!, getContentView())
-        setContentView(inflate)
-        val toolbar = findViewById(R.id.toolbar) as Toolbar?
+
+        val toolbar = inflate.findViewById(R.id.toolbar) as Toolbar?
         val toolbarViewStub = toolbar?.findViewById(R.id.toolbar_layout) as ViewStub?
         val toolbarView = inflateView(toolbarViewStub!!, getToolbarResID())
-        setSupportActionBar(toolbar)
+        if (toolbarView == null) {
+            setContentView(getContentView())
+        } else {
+            setContentView(inflate)
+            FAB = findViewById(R.id.fab) as FloatingActionButton
+        }
         supportActionBar?.setDisplayShowTitleEnabled(false)
-        FAB = findViewById(R.id.fab) as FloatingActionButton
         initData()
         initView(inflateView)
         initToolbarEvent(toolbarView, toolbar)
