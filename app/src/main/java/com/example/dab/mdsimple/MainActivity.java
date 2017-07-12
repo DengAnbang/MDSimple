@@ -1,6 +1,7 @@
 package com.example.dab.mdsimple;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -32,5 +33,6 @@ public class MainActivity extends BaseActivity {
     }
     public void tabLayout(View view) {
         startActivity(new Intent(this, TabLayoutActivity.class));
+        TabLayout tableLayout;
     }
 }

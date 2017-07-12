@@ -5,6 +5,8 @@ import android.support.v4.view.ViewPager
 import android.view.View
 import com.example.dab.mdsimple.R
 import com.example.dab.mdsimple.kotlin.activity.BaseActivity
+import java.util.*
+
 
 class TabLayoutActivity : BaseActivity() {
     override fun getContentView(): Int {
@@ -21,7 +23,9 @@ class TabLayoutActivity : BaseActivity() {
 
     override fun initData() {
         super.initData()
-        arrayListOf("第一个", "第二个", "第三个", "第四个")
+        arrayListOf("第一个", "第二个", "第三个", "第四个"
+                , "第四个", "第四个", "第四个"
+        )
                 .forEach { s: String ->
                     run {
                         ListOfFragment.add(FragmentJust.getFragment(s))
@@ -35,13 +39,14 @@ class TabLayoutActivity : BaseActivity() {
         if (view == null) return
         val tableLayout = view.findViewById(R.id.tab_FindFragment_title) as TabLayout
         val viewPager = view.findViewById(R.id.vp_FindFragment_pager) as ViewPager
-        tableLayout.tabMode = TabLayout.MODE_FIXED
+        tableLayout.tabMode = TabLayout.MODE_SCROLLABLE
         ListOfName.forEach { s: String ->
             run {
                 tableLayout.addTab(tableLayout.newTab().setText(s))
             }
         }
-        viewPager.adapter=TabAdapter(supportFragmentManager,ListOfFragment,ListOfName)
+        val tabAdapter = TabAdapter(supportFragmentManager, ListOfFragment, ListOfName)
+        viewPager.adapter = tabAdapter
         tableLayout.setupWithViewPager(viewPager)
     }
 }
