@@ -5,6 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.dab.mdsimple.MainActivity">
 
     <Button
@@ -12,5 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="floatingActionButton"
-        android:text="FloatingActionButton"/>
+        android:text="FAB"/>
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="tabLayout"
+        android:text="TabLayout"/>
 </LinearLayout>
