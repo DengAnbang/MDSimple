@@ -21,6 +21,7 @@ abstract class BaseActivity : AppCompatActivity() {
     open fun initView(view: View?) {}
     open fun initData() {}
     open fun initEvent() {}
+    open fun beforeSetContentView() {}
 
     @LayoutRes
     open fun getToolbarResID(): Int = 0

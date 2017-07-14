@@ -25,8 +25,7 @@ class TabLayoutActivity : BaseActivity() {
         super.initData()
         arrayListOf("第一个", "第二个", "第三个", "第四个"
                 , "第四个", "第四个", "第四个"
-        )
-                .forEach { s: String ->
+        ).forEach { s: String ->
                     run {
                         ListOfFragment.add(FragmentJust.getFragment(s))
                         ListOfName.add(s)
